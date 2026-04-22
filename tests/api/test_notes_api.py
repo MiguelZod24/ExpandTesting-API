@@ -181,9 +181,6 @@ class TestUserRegister:
         # Realiza el POST
         response = http_session.post(url, json=new_user_payload)
 
-        # Parsea el JSON
-        body = response.json()
-
         # Convierte toda la respuesta a string para buscar la contraseña en cualquier campo
         response_text = response.text
 
