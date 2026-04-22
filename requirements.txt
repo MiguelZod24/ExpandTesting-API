@@ -1,0 +1,6 @@
+# Dependencias del proyecto de QA Automation para testing de APIs
+pytest==8.3.5           # Framework principal para ejecutar los tests
+pytest-html==4.1.1      # Plugin para generar reportes HTML de los resultados
+requests==2.32.3        # Librería HTTP para hacer llamadas a la API
+faker==37.1.0           # Generador de datos falsos pero realistas para los tests
+python-dotenv==1.1.0    # Carga variables de entorno desde un archivo .env

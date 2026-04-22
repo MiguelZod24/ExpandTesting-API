@@ -1,0 +1,23 @@
+# Entorno virtual de Python (no se sube al repositorio)
+venv/
+.venv/
+env/
+
+# Reportes generados por pytest (se regeneran en cada ejecución)
+reports/
+
+# Archivos compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Variables de entorno con datos sensibles
+.env
+
+# Archivos de configuración de IDEs
+.idea/
+.vscode/
+*.iml
+
+# Cache de pytest
+.pytest_cache/
