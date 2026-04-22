@@ -345,9 +345,10 @@ class TestUserLogin:
         url = f"{base_url}/users/login"
 
         # Construye payload con email correcto pero contraseña incorrecta
+        wrong_credential = "WrongPass@9999"
         login_payload = {
-            "email": registered_user["email"],   # Email válido del usuario registrado
-            "password": "WrongPass@9999",         # Contraseña deliberadamente incorrecta
+            "email": registered_user["email"],
+            "password": wrong_credential,
         }
 
         # Realiza el POST con credenciales inválidas
@@ -365,9 +366,10 @@ class TestUserLogin:
         url = f"{base_url}/users/login"
 
         # Construye payload con un email que definitivamente no existe en el sistema
+        dummy_credential = "SomePass@1234"
         login_payload = {
-            "email": f"nonexistent_{fake.uuid4()[:8]}@nowhere.com",  # Email inventado único
-            "password": "SomePass@1234",  # Contraseña cualquiera (el email no existe)
+            "email": f"nonexistent_{fake.uuid4()[:8]}@nowhere.com",
+            "password": dummy_credential,
         }
 
         # Realiza el POST
@@ -385,8 +387,9 @@ class TestUserLogin:
         url = f"{base_url}/users/login"
 
         # Payload sin el campo 'email' para probar la validación del servidor
+        dummy_credential = "SomePass@1234"
         incomplete_payload = {
-            "password": "SomePass@1234",  # Solo envía contraseña, sin email
+            "password": dummy_credential,
         }
 
         # Realiza el POST con payload incompleto
